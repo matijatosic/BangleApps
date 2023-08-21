@@ -1,5 +1,6 @@
 (function() {
   require("Font4x8Numeric").add(Graphics);
+  require('Font8x16').add(Graphics);
   return {
     name: "Bangle",
     items: [
@@ -8,7 +9,7 @@
           let d = new Date();
           let g = Graphics.createArrayBuffer(24,24,1,{msb:true});
           g.drawImage(atob("FhgBDADAMAMP/////////////////////8AADwAAPAAA8AADwAAPAAA8AADwAAPAAA8AADwAAPAAA8AADwAAP///////"),1,0);
-          g.setFont("6x15").setFontAlign(0,0).drawString(d.getDate(),11,17).drawString(d.getDate(),11,16);
+          g.setFont("6x15").setFontAlign(0,0).drawString(d.getDate(),12,16);
           return {
             text : require("locale").dow(d,1).toUpperCase(),
             img : g.asImage("string")
